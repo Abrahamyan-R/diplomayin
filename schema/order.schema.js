@@ -12,7 +12,7 @@ const orderSchema = new mongoose.Schema({
     },
   },
   dimensions: {
-    witdh: Number,
+    width: Number,
     height: Number,
   },
   templates: [{
