@@ -11,6 +11,7 @@ const { adminRouter } = require('./router/admin.router');
 const { auth } = require('./middleware/auth.middleware');
 const { adminMiddleware } = require('./middleware/admin.middleware');
 const { templateRouter } = require('./router/template.router');
+const { orderRouter } = require('./router/order.router');
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use('/paper', paperRouter);
 app.use('/cover', coverRouter);
 app.use('/admin', adminRouter);
 app.use('/template', templateRouter);
+app.use('/order', orderRouter);
 app.post('/upload', auth, adminMiddleware, upload.single('file'), (req, res, next) => {
   res.status(200).json({ filename: req.file.filename });
 });
@@ -51,4 +53,4 @@ app.use((err, req, res, next) => {
   res.status(500).json({ msg: 'Ծրագրային խնդիր' });
 });
 
-app.listen(8083, '192.168.1.147');
+app.listen(8083, '192.168.11.53');
