@@ -53,4 +53,4 @@ app.use((err, req, res, next) => {
   res.status(500).json({ msg: 'Ծրագրային խնդիր' });
 });
 
-app.listen(8083, '192.168.11.53');
+app.listen(8083);
