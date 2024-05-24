@@ -28,6 +28,7 @@ const orderSchema = new mongoose.Schema({
     colorsCount: Number,
   }],
   price: Number,
+  orderCount: Number,
   userId: String,
   status: String,
 });
